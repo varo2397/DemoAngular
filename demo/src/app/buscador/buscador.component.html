@@ -1,3 +1,28 @@
-<p>
-  buscador works!
-</p>
+<div class="col-md-8 offset-md-2">
+  <form>
+    <div class="form-group text-center">
+      <label>Buscar cerveza <input (change)="buscarCervezaPorNombre($event)" class="form-control"></label>
+    </div>
+  </form>
+</div>
+
+<div class="col-md-8 offset-2">
+  <table class="table table-hover text-center">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Fecha de creación</th>
+        <th scope="col">Nivel de alcohol</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cerveza of listaCervezas">
+      <th>{{cerveza.name}}</th>
+      <th>{{cerveza.first_brewed}}</th>
+      <th>{{cerveza.abv + "%"}}</th>
+
+    </tr>
+
+    </tbody>
+  </table>
+</div>

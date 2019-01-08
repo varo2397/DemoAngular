@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-md-12 ">
+        <br>
+        <br>
+
+        <div class="text-center">
+          <div class="btn-group">
+            <button class="btn btn-primary" routerLink="/buscador">Buscador</button>
+            <button class="btn btn-primary" (click)="cervezaAleatoria()" >Cerveza aletoria</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container-fluid">
+          <br>
+          <br>
+
+          <router-outlet></router-outlet>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

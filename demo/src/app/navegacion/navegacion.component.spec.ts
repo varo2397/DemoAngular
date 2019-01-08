@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AleatoriaComponent } from './aleatoria.component';
+import { NavegacionComponent } from './navegacion.component';
 
-describe('AleatoriaComponent', () => {
-  let component: AleatoriaComponent;
-  let fixture: ComponentFixture<AleatoriaComponent>;
+describe('NavegacionComponent', () => {
+  let component: NavegacionComponent;
+  let fixture: ComponentFixture<NavegacionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AleatoriaComponent ]
+      declarations: [ NavegacionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AleatoriaComponent);
+    fixture = TestBed.createComponent(NavegacionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -5,18 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BuscadorComponent } from './buscador/buscador.component';
 import { CervezaComponent } from './cerveza/cerveza.component';
-import { AleatoriaComponent } from './aleatoria/aleatoria.component';
+import { NavegacionComponent } from './navegacion/navegacion.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     BuscadorComponent,
     CervezaComponent,
-    AleatoriaComponent
+    NavegacionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
