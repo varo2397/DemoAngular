@@ -1,8 +1,13 @@
-<div class="col-md-8 offset-md-2">
-  <form>
-    <div class="form-group text-center">
-      <label>Buscar cerveza <input (change)="buscarCervezaPorNombre($event)" class="form-control"></label>
+<div class="col-md-4 offset-md-4">
+  <form [formGroup]="formularioCerveza" (ngSubmit)="enviarFormulario()">
+    <div class="form-group ">
+      <label>Buscar cerveza </label>
+      <input  class="form-control" formControlName="nombreCerveza">
     </div>
+    <button class="btn btn-info" type="submit">Buscar</button>
+    <br>
+    <br>
+
   </form>
 </div>
 

@@ -20,6 +20,6 @@ export class CervezasService {
   }
 
   obtenerCervezaPorId(idCerveza: number): Observable<any>{
-    return this._http.get(this.URLBase+idCerveza);
+    return this._http.get(this.URLBase+ '/' +idCerveza);
   }
 }

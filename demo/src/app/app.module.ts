@@ -7,6 +7,7 @@ import { BuscadorComponent } from './buscador/buscador.component';
 import { CervezaComponent } from './cerveza/cerveza.component';
 import { NavegacionComponent } from './navegacion/navegacion.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

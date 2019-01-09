@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CervezasService} from '../cervezas.service';
 import {Router} from '@angular/router';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-buscador',
@@ -9,21 +10,32 @@ import {Router} from '@angular/router';
 })
 export class BuscadorComponent implements OnInit {
 
-  public listaCervezas: any[];
+  listaCervezas: any[];
+  formularioCerveza: FormGroup;
 
   constructor(private cervezas: CervezasService, private _router: Router) { }
 
   ngOnInit() {
+    this.formularioCerveza = new FormGroup({
+      'nombreCerveza': new FormControl(null)
+    })
   }
 
-  buscarCervezaPorNombre(event: any){
-    let nombreCerveza = event.target.value;
+  buscarCervezaPorNombre(nombreCerveza: string){
+
 
     this.cervezas.obtenerCervezasPorNombre(nombreCerveza).subscribe(
       (listaCervezas)=>{
         this.listaCervezas = listaCervezas;
       }
     )
+  }
+
+  enviarFormulario(){
+
+    let nombreCerveza: string = this.formularioCerveza.get('nombreCerveza').value;
+    this.buscarCervezaPorNombre(nombreCerveza);
+
   }
 
 
